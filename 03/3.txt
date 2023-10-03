@@ -1,0 +1,9 @@
+Le richieste di informazioni a server presenti in internet e in grado di fornire servizi sono frequentissime nei siti web.
+Le risorse necessarie per il funzionamento di un sito web, o di una applicazione web, sono file CSS, file HTML, immagini, script.java, file xml e relativi schemi.
+Ogni pagina web, anche statica, si costruisce con molteplici risorse distribuite da uno o più server.
+Il protocollo di trasporto utilizzato per la comunicazione è https, o meno frequentemente, http.
+Possiamo simulare il comportamento di un client utilizzando software, estensioni del browser, siti o applicazioni web che simulano le richieste dei client.
+Possiamo altrimenti simulare il comportamento di un server utilizzando software, siti, servizi in grado di fornire simulazione di un server che un client ha intenzione di contattare
+ 
+es: https://jsonplaceholder.typicode.com/
+

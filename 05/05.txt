@@ -1,0 +1,4 @@
+Le Callback
+La funzione che abbiamo realizzato, che recupera da un server in rete l'elenco delle cose da fare, sarà richiamata tutte le volte che questo elenco servirà.
+Per esempio ci possiamo trovare nei seguenti casi: recupera l'elenco dei todos e visualizzami solamente quelli di domani; dall'elenco estraimi i todos che non sono importanti; rappresenta i todos in un calendario dal più prossimo al più lontano;...
+Per fare questo in javascript esistono le callback: posso passare alla funzione getTodos anche una funzione la quale sarà eseguita tutte le volte che l'elenco sarà ottenuto.

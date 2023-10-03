@@ -17,7 +17,7 @@ const saròPromosso = () => {
     ) {
       resolve();
     } else {
-      reject();
+      reject(err);
     }
   });
 };
@@ -37,13 +37,14 @@ function prendoSufficienzaInTutteLeMaterie() {
   return true;
 }
 function prendoBuonVotoCondotta() {
-  return true;
+  // return true;
+  return false;
 }
 function frequentoAlmenoIl25PercentoDelleLezioni() {
   return true;
 };
 function miIscrivoScuolaGuida(){
-  console.log("evviva, iscritto a scuola guida");
+  console.log("evviva: iscritto a scuola guida!");
 };
 function vadoInVacanza(){
   console.log("evviva, vado in vacanza");

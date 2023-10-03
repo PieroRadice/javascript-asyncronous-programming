@@ -2,7 +2,6 @@
 //nota: per non incorrere in problemi CORS utilizzare Go Live per testare il codice
 const getTodos = (risorsa, callback) => {
   const request = new XMLHttpRequest();
-
   request.addEventListener("readystatechange", () => {
     if (request.readyState === 4 && request.status === 200) {
       const data = JSON.parse(request.responseText);

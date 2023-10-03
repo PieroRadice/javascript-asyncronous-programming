@@ -2,8 +2,8 @@
 //con setTimeout simulo di andare a leggere i post da un server posizionato in internet con ritardo
 {
   const posts = [
-    { title: "primo", body: "questo è il primo post" },
-    { title: "secondo", body: "questo è il secondo post" },
+    { title: "primo", body: "questo è il primo post di 02.js" },
+    { title: "secondo", body: "questo è il secondo post di 02.js" },
   ];
 
   function getPost() {

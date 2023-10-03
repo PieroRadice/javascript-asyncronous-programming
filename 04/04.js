@@ -6,6 +6,6 @@ request.addEventListener("readystatechange", () => {
     console.log("errore nel reperimento della risorsa");
   }
 });
-//request.open("GET", "https://jsonplaceholder.typicode.com/todos");
-request.open("GET", "https://jsonplaceholder.typicode.com/todoss");
+request.open("GET", "https://jsonplaceholder.typicode.com/todos");//riga per il quale il server risponde correttamente
+// request.open("GET", "https://jsonplaceholder.typicode.com/todoss");//il server non trova la risorsa cercata
 request.send();

@@ -11,7 +11,6 @@ const getTodosCallbackB = (callback) => {
     }
   });
   request.open("GET", "https://jsonplaceholder.typicode.com/todoss");
-
   request.send();
 };
 //

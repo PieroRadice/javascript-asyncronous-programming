@@ -7,12 +7,12 @@ const recuperaRisorsaEsempio = () => {
 //Per promessa si intendono una serie di azioni da effettuare le quali possono andare
 //a buon fine oppure no. Nel caso in cui le azioni la promessa va a buon fine saranno eseguite le funzioni resolve e reject presenti come parametro nella promise
 
-const saròPromosso = () => {
+let saròPromosso = () => {
   return new Promise((resolve, reject) => {
     if (
       prendoSufficienzaInTutteLeMaterie() &&
       prendoBuonVotoCondotta() &&
-      frequentoAlmenoIl25PercentoDelleLezioni()
+      frequentoAlmenoIl75PercentoDelleLezioni()
       //true
     ) {
       resolve();
@@ -22,6 +22,7 @@ const saròPromosso = () => {
   });
 };
 
+carlo = saròPromosso;
 saròPromosso()
   .then(() => {
     miIscrivoScuolaGuida();
@@ -40,19 +41,19 @@ function prendoBuonVotoCondotta() {
   // return true;
   return false;
 }
-function frequentoAlmenoIl25PercentoDelleLezioni() {
+function frequentoAlmenoIl75PercentoDelleLezioni() {
   return true;
-};
-function miIscrivoScuolaGuida(){
+}
+function miIscrivoScuolaGuida() {
   console.log("evviva: iscritto a scuola guida!");
-};
-function vadoInVacanza(){
+}
+function vadoInVacanza() {
   console.log("evviva, vado in vacanza");
-};
-function lavoroTuttaEstate(){
+}
+function lavoroTuttaEstate() {
   console.log(
     "Fantastico, posso studiare per gli esami di riparazione intanto che lavoro"
   );
-};
+}
 
 //

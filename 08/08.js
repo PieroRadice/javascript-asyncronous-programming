@@ -22,7 +22,7 @@ let saròPromosso = () => {
   });
 };
 
-carlo = saròPromosso;
+//carlo = saròPromosso;
 saròPromosso()
   .then(() => {
     miIscrivoScuolaGuida();

@@ -22,12 +22,13 @@ recuperaRisorsa = async (risorsa) => {
   return data;
 };
 //ricordiamo che recupera risorsa restituisce una promise, possiamo utilizzare il .then() per elaborare i dati e il .catch() per la gestione dell'errore
-// ancor più brevemente potremmo rappresentare  in una sola riga la funzione:
+
 recuperaRisorsa = async (risorsa) => {
   const risposta = await fetch(risorsa);
   return await risposta.json();
 };
 
+// ancor più brevemente potremmo rappresentare  in una sola riga la funzione:
 recuperaRisorsa = async (risorsa) => {
   return await (await fetch(risorsa)).json();
 };

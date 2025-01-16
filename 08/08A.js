@@ -15,7 +15,9 @@ const recuperaRisorsa = (risorsa) => {
     request.send();
   });
 };
-
+//resolve e reject sono due funzioni da eseguirs nei casi in cui la promise giunge a buon fine oppure no
+//come si possono passare queste funzioni se l'unico parametro che appare nella definizione di recuperaRisorsa è una sola?
+//per questo motivo si utilizza la sintassi .then() e .catch() oppure wait e async await
 recuperaRisorsa("https://jsonplaceholder.typicode.com/todos")
   .then((data) => {
     console.log(data);

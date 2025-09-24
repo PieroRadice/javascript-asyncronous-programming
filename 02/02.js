@@ -2,8 +2,8 @@
 //con setTimeout simulo di andare a leggere i post da un server posizionato in internet con ritardo
 {
   const posts = [
-    { title: "primo", body: "questo è il primo post di 02.js" },
-    { title: "secondo", body: "questo è il secondo post di 02.js" },
+    { title: "----primo", body: "-----questo è il primo post di 02.js" },
+    { title: "----secondo", body: "-----questo è il secondo post di 02.js" },
   ];
 
   function getPost() {
@@ -21,10 +21,10 @@
     }, 2000); //provare con 0 per mostrare che il codice è corretto
   }
   //lancio la funzione per stampare tutti i post
-  createPost({ title: "terzo", body: "questo è il terzo post" });
+  createPost({ title: "----terzo", body: "----questo è il terzo post" });
 
   getPost();
 
-  document.body.innerHTML += "<br>Dove si posizionerà questa scritta del secondoScript?";
+  document.body.innerHTML += "<br>-----Dove si posizionerà questa scritta del secondoScript?";
 }
 //non riesco a ottenere il risultato! sul browser riesco a vedere solamente i primi due post, il terzo non compare.

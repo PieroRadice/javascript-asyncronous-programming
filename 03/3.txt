@@ -2,5 +2,7 @@ Le richieste di informazioni a server presenti in internet e in grado di fornire
 Le risorse di una applicazione web sono file CSS, file HTML, immagini, script javascript, file xml etc e sono trasmesse al client a fronte di una sua richiesta. Ogni pagina web, anche statica, si costruisce con molteplici risorse distribuite da uno o più server.
 Il protocollo utilizzato per la comunicazione è https o, meno frequentemente, http.
 
+Dopo aver aperto il file html cercate fra gli strumenti del browser la richiesta che è stata inviata al server e provate a analizzare la risposta.
+Provate a utilizzare i dati ricevuti dal server per mostrare dei contenuti sulla pagina del browser.
 es: https://jsonplaceholder.typicode.com/
 

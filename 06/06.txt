@@ -1,0 +1,2 @@
+In questo esempio viene creata una funzione che si procura dei dati presso un server attraverso una chiamata http e una volta ottenuteli, 
+attraverso la gestione degli eventi, viene innescata una funzione tramite un evento.

@@ -1,2 +1,6 @@
-In questo esempio viene creata una funzione che si procura dei dati presso un server attraverso una chiamata http e una volta ottenuteli, 
-attraverso la gestione degli eventi, viene innescata una funzione tramite un evento.
+Per questa lezione è necessario utilizzare golive che, se installato, vi permette di avviare un server per il test dei vostri script
+senza incorrere nei limiti fissati dalle cross origin policy.
+Se non avete sulla barra in basso, in fondo a dx, la dicitura golive dovete installare l'estensione.
+In questo esempio viene creata una funzione che si procura dei dati presso un server attraverso una chiamata http e una volta ottenuteli
+ viene innescata una funzione da un evento.
+ 

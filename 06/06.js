@@ -10,6 +10,7 @@ const getTodos = (callback) => {
     }
   });
   request.open("GET", "06.json");
+  //request.open("GET", "666.json");
   request.send();
 };
 

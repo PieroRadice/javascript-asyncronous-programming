@@ -5,7 +5,8 @@ const recuperaRisorsaEsempio = () => {
 
 //la funzione recupera risorsa restituisce una promessa.
 //Per promessa si intendono una serie di azioni da effettuare le quali possono andare
-//a buon fine oppure no. Nel caso in cui la promessa va a buon fine saranno eseguite le funzioni resolve e reject presenti come parametro nella promise
+//a buon fine oppure no. Nel caso in cui la promessa vada a buon fine o meno saranno eseguite le funzioni resolve e reject 
+// rispettivmente presenti come parametro nella promise.
 
 let saròPromosso = () => {
   return new Promise((resolve, reject) => {
@@ -33,7 +34,8 @@ saròPromosso()
   });
 //si noti che le funzioni riportate sotto non sono state create con la modalità const nomeFunzione = (...)=>{.....}
 //Le funzioni anonime, attribuite poi a una costante, non vengono riconosciute se sono riportate dopo la loro chiamata
-//se invece utilizziamo le funzioni introdotte dalla parola chiave funcion esse godono della proprietà di
+//se invece utilizziamo le funzioni introdotte dalla parola chiave funcion esse godono della proprietà di hoisting
+//vale a dire che possono essere richiamate anche se sono state definite dopo la loro chiamata.
 function prendoSufficienzaInTutteLeMaterie() {
   return true;
 }

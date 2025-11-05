@@ -1,0 +1,80 @@
+🧩 Esercizi base – comprensione delle Promises
+Esercizio 1: Promessa semplice
+
+Scrivi una funzione promessaDiBuonUmore() che restituisce una Promise:
+se la variabile sonoDiBuonUmore è true, chiama resolve("Oggi sono felice!");
+altrimenti chiama reject("Meglio non parlarmi oggi...").
+Poi invoca la funzione e gestisci la risposta con .then() e .catch() stampando il messaggio in console.
+
+Esercizio 2: Uso di setTimeout
+Scrivi una funzione cuociLaPizza() che restituisce una Promise.
+Dopo 3 secondi, deve eseguire resolve("Pizza pronta!").
+Gestisci la promessa con .then() e stampa in console un messaggio quando la pizza è pronta.
+💡 Suggerimento: usa setTimeout(() => { ... }, 3000).
+
+🧩 Esercizi base
+1️⃣ – Promessa semplice
+
+Crea una funzione controllaInternet() che restituisca una promessa:
+Se la variabile reteFunziona = true, risolve con il messaggio "Connessione attiva".
+Altrimenti la rifiuta con il messaggio "Connessione assente".
+Gestisci la promessa con .then() e .catch() stampando il messaggio in console.
+
+2️⃣ – Promessa con ritardo
+
+Scrivi una funzione scaricaFile() che simula il download di un file con setTimeout.
+Dopo 3 secondi deve risolvere con "Download completato!".
+Mostra in console un messaggio quando il download è terminato.
+
+3️⃣ – Promessa che fallisce
+
+Crea una funzione faiEsame() che restituisca una promessa:
+Genera un numero casuale tra 0 e 1.
+Se il numero è maggiore di 0.6 → resolve("Promosso!")
+Altrimenti → reject("Bocciato!")
+Gestisci il risultato con .then() e .catch().
+
+🚀 Esercizi intermedi
+4️⃣ – Promesse concatenate
+
+Definisci tre funzioni:
+studia()
+faiEsame()
+riceviRisultato()
+
+Ognuna restituisce una promessa risolta dopo un breve intervallo con un messaggio diverso.
+Esegui le funzioni in sequenza con .then() concatenati, mostrando in console ogni fase.
+
+5️⃣ – Gestione errori in catena
+
+Modifica l’esercizio precedente in modo che faiEsame() possa fallire (con reject("Esame fallito!")).
+Gestisci l’errore in un .catch() finale che stampa "Riproverò il prossimo appello".
+
+🧠 Esercizi avanzati
+6️⃣ – Promesse in parallelo
+
+Scrivi tre funzioni (preparaAntipasto(), preparaPrimo(), preparaDolce()) che restituiscono una promessa risolta dopo tempi diversi.
+Usa Promise.all() per attendere che siano tutte completate e poi stampa "Tutto pronto, si mangia!".
+
+7️⃣ – Uso di async/await
+
+Rifletti l’esercizio 4 usando async e await invece dei .then().
+Gestisci eventuali errori con try...catch.
+
+8️⃣ – Giornata dello studente
+
+Crea funzioni che rappresentano momenti della giornata:
+miSveglio()
+vadoAScuola()
+studio()
+gioco()
+vadoADormire()
+Ogni funzione restituisce una promessa risolta o rifiutata.
+Scrivi una funzione giornataCompleta() che usa async/await per simulare l’intera giornata e mostra in console come va a finire.
+
+✏️ Riflessione
+
+Cosa succede se in una promessa chiami sia resolve() che reject()?
+Cosa accade se una promessa non viene gestita con .catch()?
+Qual è la differenza tra una Promise e una funzione con callback?
+

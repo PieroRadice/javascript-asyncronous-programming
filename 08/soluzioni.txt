@@ -1,0 +1,198 @@
+Esercizio 1 – Promessa semplice
+
+function controllaInternet() {
+  return new Promise((resolve, reject) => {
+    let reteFunziona = true; // prova a mettere false per testare reject
+
+    if (reteFunziona) {
+      resolve("Connessione attiva");
+    } else {
+      reject("Connessione assente");
+    }
+  });
+}
+
+controllaInternet()
+  .then((messaggio) => console.log(messaggio))
+  .catch((errore) => console.log(errore));
+
+Esercizio 2 – Promessa con ritardo
+function scaricaFile() {
+  return new Promise((resolve) => {
+    console.log("Download in corso...");
+    setTimeout(() => {
+      resolve("Download completato!");
+    }, 3000);
+  });
+}
+
+scaricaFile().then((messaggio) => console.log(messaggio));
+
+Esercizio 3 – Promessa che fallisce
+function faiEsame() {
+  return new Promise((resolve, reject) => {
+    let votoCasuale = Math.random();
+    if (votoCasuale > 0.6) {
+      resolve("Promosso!");
+    } else {
+      reject("Bocciato!");
+    }
+  });
+}
+
+faiEsame()
+  .then((risultato) => console.log(risultato))
+  .catch((errore) => console.log(errore));
+
+Esercizio 4 – Promesse concatenate
+function studia() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Ho studiato"), 1000);
+  });
+}
+
+function faiEsame() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Ho fatto l’esame"), 1500);
+  });
+}
+
+function riceviRisultato() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Sono stato promosso!"), 1000);
+  });
+}
+
+studia()
+  .then((msg) => {
+    console.log(msg);
+    return faiEsame();
+  })
+  .then((msg) => {
+    console.log(msg);
+    return riceviRisultato();
+  })
+  .then((msg) => console.log(msg));
+
+Esercizio 5 – Gestione errori in catena
+function faiEsame() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (Math.random() > 0.5) resolve("Ho passato l’esame!");
+      else reject("Esame fallito!");
+    }, 1500);
+  });
+}
+
+function studia() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Ho studiato"), 1000);
+  });
+}
+
+studia()
+  .then((msg) => {
+    console.log(msg);
+    return faiEsame();
+  })
+  .then((msg) => console.log(msg))
+  .catch((err) => console.log(err + " → Riproverò il prossimo appello"));
+
+Esercizio 6 – Promesse in parallelo
+function preparaAntipasto() {
+  return new Promise((resolve) =>
+    setTimeout(() => resolve("Antipasto pronto"), 2000)
+  );
+}
+
+function preparaPrimo() {
+  return new Promise((resolve) =>
+    setTimeout(() => resolve("Primo pronto"), 3000)
+  );
+}
+
+function preparaDolce() {
+  return new Promise((resolve) =>
+    setTimeout(() => resolve("Dolce pronto"), 1000)
+  );
+}
+
+Promise.all([preparaAntipasto(), preparaPrimo(), preparaDolce()]).then(
+  (piatti) => {
+    console.log(piatti); // stampa tutti i risultati
+    console.log("Tutto pronto, si mangia!");
+  }
+);
+
+Esercizio 7 – Uso di async/await
+function studia() {
+  return new Promise((resolve) =>
+    setTimeout(() => resolve("Ho studiato"), 1000)
+  );
+}
+
+function faiEsame() {
+  return new Promise((resolve, reject) =>
+    setTimeout(() => {
+      if (Math.random() > 0.5) resolve("Promosso!");
+      else reject("Bocciato!");
+    }, 1500)
+  );
+}
+
+async function giornataUniversitaria() {
+  try {
+    const s = await studia();
+    console.log(s);
+
+    const e = await faiEsame();
+    console.log(e);
+  } catch (err) {
+    console.log("Errore:", err);
+  }
+}
+
+giornataUniversitaria();
+
+Esercizio 8 – Giornata dello studente
+function miSveglio() {
+  return new Promise((resolve, reject) => {
+    Math.random() > 0.1 ? resolve("Mi sono svegliato!") : reject("Mi sono riaddormentato...");
+  });
+}
+
+function vadoAScuola() {
+  return new Promise((resolve, reject) => {
+    Math.random() > 0.2 ? resolve("Sono arrivato a scuola") : reject("Autobus perso!");
+  });
+}
+
+function studio() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Ho studiato bene!"), 1000);
+  });
+}
+
+function gioco() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Mi sono rilassato giocando"), 500);
+  });
+}
+
+function vadoADormire() {
+  return new Promise((resolve) => resolve("Buonanotte!"));
+}
+
+async function giornataCompleta() {
+  try {
+    console.log(await miSveglio());
+    console.log(await vadoAScuola());
+    console.log(await studio());
+    console.log(await gioco());
+    console.log(await vadoADormire());
+  } catch (err) {
+    console.log("Giornata rovinata:", err);
+  }
+}
+
+giornataCompleta();

@@ -61,16 +61,19 @@ Usa Promise.all() per attendere che siano tutte completate e poi stampa "Tutto p
 Rifletti l’esercizio 4 usando async e await invece dei .then().
 Gestisci eventuali errori con try...catch.
 
-8️⃣ – Giornata dello studente
+8️⃣ – Preparo il pranzo di natale
 
-Crea funzioni che rappresentano momenti della giornata:
-miSveglio()
-vadoAScuola()
-studio()
-gioco()
-vadoADormire()
-Ogni funzione restituisce una promessa risolta o rifiutata.
-Scrivi una funzione giornataCompleta() che usa async/await per simulare l’intera giornata e mostra in console come va a finire.
+azioni necessarie per la realizzazione del pranzo di Natale:
+verificoDisponibilitàFinanziaria(utente,pssw) 
+deve essere una promise che se va a buonfine mi restituisce la disponibilità nel mio conto corrente
+costruiscoIlMenu(disonibilitàfinanziaria,ospiti)
+deve essere una promise che mi restituisce un elenco di menù realizzabili per tot ospiti data una certo budget
+faccioListaDellaSpesa(menu,ospiti)
+deve essere una promise che mi restituisce i fabbisogni di ingredienti
+mandoInviti(elenco di persone invitate)
+deve essere un promise che mi restituisce gli amici che hanno accettato il mio invito alla cena di Natale
+cucino()
+
 
 ✏️ Riflessione
 

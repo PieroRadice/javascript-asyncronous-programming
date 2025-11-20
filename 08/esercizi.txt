@@ -64,15 +64,16 @@ Gestisci eventuali errori con try...catch.
 8️⃣ – Preparo il pranzo di natale
 
 azioni necessarie per la realizzazione del pranzo di Natale:
-verificoDisponibilitàFinanziaria(utente,pssw) 
+1)verificoDisponibilitàFinanziaria(utente,pssw) 
 deve essere una promise che se va a buonfine mi restituisce la disponibilità nel mio conto corrente
-costruiscoIlMenu(disonibilitàfinanziaria,ospiti)
+2)costruiscoIlMenu(disonibilitàfinanziaria,ospiti)
 deve essere una promise che mi restituisce un elenco di menù realizzabili per tot ospiti data una certo budget
-faccioListaDellaSpesa(menu,ospiti)
+3)faccioListaDellaSpesa(menu,ospiti)
 deve essere una promise che mi restituisce i fabbisogni di ingredienti
-mandoInviti(elenco di persone invitate)
+4)mandoInviti(elenco di persone invitate)
 deve essere un promise che mi restituisce gli amici che hanno accettato il mio invito alla cena di Natale
-cucino()
+5)cucino()
+è LA FUNZIONE CHE METTE IN ORDINE IL TUTTO
 
 
 ✏️ Riflessione
